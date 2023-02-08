@@ -4,7 +4,7 @@ import LanguageDetector from 'i18next-browser-languagedetector';
 import Backend from 'i18next-http-backend';
 // import { DateTime } from 'luxon';
 
-const backendOpts = {  loadPath:'/locales/{{lng}}/translation.json',  crossDomain: true,}
+const backendOpts = {  loadPath:'https://translation.b-cdn.net/locales/{{lng}}/translation.json',  crossDomain: true,}
 
 i18n
   // i18next-http-backend
