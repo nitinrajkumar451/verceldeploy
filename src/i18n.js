@@ -4,6 +4,8 @@ import LanguageDetector from 'i18next-browser-languagedetector';
 import Backend from 'i18next-http-backend';
 // import { DateTime } from 'luxon';
 
+const backendOpts = {  loadPath: "translation.b-cdn.net",  crossDomain: true,}
+
 i18n
   // i18next-http-backend
   // loads translations from your server
@@ -19,6 +21,7 @@ i18n
   .init({
     debug: true,
     fallbackLng: 'en',
+    backend: backendOpts,
     interpolation: {
       escapeValue: false, // not needed for react as it escapes by default
       // format: (value, format, lng) => { // legacy usage
